@@ -1,0 +1,276 @@
+{% extends "base.html" %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+    <h1 class="text-3xl sm:text-4xl font-bold text-primary mb-4">Featured Projects</h1>
+    <p class="text-lg text-secondary mb-12">A showcase of my technical projects and innovations.</p>
+
+    <!-- Core Projects Section -->
+    <div class="mb-20">
+        <h2 class="text-2xl font-bold text-gradient mb-8">Core Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Multi-cuisine Website -->
+            <div class="group bg-dark-lighter rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-4px] overflow-hidden border border-dark-lightest">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <span class="text-3xl mr-3">🍽</span>
+                            <h3 class="text-xl font-bold text-primary">Multi-cuisine Website</h3>
+                        </div>
+                        <a href="https://snacc-attacc.netlify.app" target="_blank" rel="noopener noreferrer" 
+                           class="px-3 py-1 text-xs font-medium text-accent bg-dark rounded-full hover:bg-dark-lightest transition-colors">
+                            Live Demo
+                        </a>
+                    </div>
+                    <p class="text-secondary mb-4">
+                        A responsive website showcasing diverse cuisines with an intuitive user interface and seamless navigation experience.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-2 py-1 text-xs font-medium bg-dark text-secondary rounded">HTML5</span>
+                        <span class="px-2 py-1 text-xs font-medium bg-dark text-secondary rounded">CSS3</span>
+                        <span class="px-2 py-1 text-xs font-medium bg-dark text-secondary rounded">JavaScript</span>
+                    </div>
+                    <a href="https://snacc-attacc.netlify.app" target="_blank" rel="noopener noreferrer" 
+                       class="flex items-center text-accent hover:text-indigo-400 transition-colors">
+                        <span class="text-sm font-medium">Visit Website</span>
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Gesture-Controlled Chrome Dino Game -->
+            <div class="group bg-dark-lighter rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-4px] overflow-hidden border border-dark-lightest">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <span class="text-3xl mr-3">🦖</span>
+                            <h3 class="text-xl font-bold text-primary">Gesture-Controlled Chrome Dino Game</h3>
+                        </div>
+                        <span class="px-3 py-1 text-xs font-medium text-accent bg-dark rounded-full">ML Project</span>
+                    </div>
+                    <p class="text-secondary mb-4">
+                        Developed a system to control the Chrome Dino Game using real-time hand gestures via webcam, enabling hands-free gaming experience.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 text-xs font-medium bg-dark text-secondary rounded">Python</span>
+                        <span class="px-2 py-1 text-xs font-medium bg-dark text-secondary rounded">OpenCV</span>
+                        <span class="px-2 py-1 text-xs font-medium bg-dark text-secondary rounded">MediaPipe</span>
+                        <span class="px-2 py-1 text-xs font-medium bg-dark text-secondary rounded">PyAutoGUI</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Smart Parking System -->
+            <div class="group bg-dark-lighter rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-4px] overflow-hidden border border-dark-lightest">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <span class="text-3xl mr-3">🧭</span>
+                            <h3 class="text-xl font-bold text-primary">Smart Parking System</h3>
+                        </div>
+                        <span class="px-3 py-1 text-xs font-medium text-accent bg-dark rounded-full">SIH Project</span>
+                    </div>
+                    <p class="text-secondary mb-4">
+                        An innovative parking management solution with real-time tracking and automation capabilities, developed for Smart India Hackathon.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 text-xs font-medium bg-dark text-secondary rounded">IoT</span>
+                        <span class="px-2 py-1 text-xs font-medium bg-dark text-secondary rounded">Python</span>
+                        <span class="px-2 py-1 text-xs font-medium bg-dark text-secondary rounded">Real-time Tracking</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drone-Based Wall Crack Detection -->
+            <div class="group bg-dark-lighter rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-4px] overflow-hidden border border-dark-lightest">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <span class="text-3xl mr-3">🛠</span>
+                            <h3 class="text-xl font-bold text-primary">Drone-Based Wall Crack Detection</h3>
+                        </div>
+                        <span class="px-3 py-1 text-xs font-medium text-accent bg-dark rounded-full">CIIA-4</span>
+                    </div>
+                    <p class="text-secondary mb-4">
+                        An advanced system utilizing drone technology and computer vision for automated detection and analysis of structural wall cracks.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 text-xs font-medium bg-dark text-secondary rounded">Computer Vision</span>
+                        <span class="px-2 py-1 text-xs font-medium bg-dark text-secondary rounded">Drones</span>
+                        <span class="px-2 py-1 text-xs font-medium bg-dark text-secondary rounded">OpenCV</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Train Schedule System -->
+            <div class="group bg-dark-lighter rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-4px] overflow-hidden border border-dark-lightest">
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center">
+                            <span class="text-3xl mr-3">🚆</span>
+                            <h3 class="text-xl font-bold text-primary">Train Schedule System</h3>
+                        </div>
+                        <span class="px-3 py-1 text-xs font-medium text-accent bg-dark rounded-full">Voice Enabled</span>
+                    </div>
+                    <p class="text-secondary mb-4">
+                        A comprehensive train scheduling system with voice command functionality and PostgreSQL database integration.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 text-xs font-medium bg-dark text-secondary rounded">PostgreSQL</span>
+                        <span class="px-2 py-1 text-xs font-medium bg-dark text-secondary rounded">Python</span>
+                        <span class="px-2 py-1 text-xs font-medium bg-dark text-secondary rounded">Voice Recognition</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Automation Section -->
+    <div>
+        <div class="flex items-center justify-between mb-8">
+            <h2 class="text-2xl font-bold text-gradient">AI Automation using n8n</h2>
+            <a href="https://github.com/anshikaaah/automation-workflows-" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center px-4 py-2 bg-dark-lightest hover:bg-dark text-accent rounded-lg transition-colors duration-300">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                View on GitHub
+            </a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Daily Code Challenge -->
+            <div class="group bg-dark-lighter rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-4px] overflow-hidden border border-dark-lightest">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl mr-3">💻</span>
+                        <h3 class="text-xl font-bold text-primary">Daily Code Challenge</h3>
+                    </div>
+                    <p class="text-secondary mb-4">
+                        Automated workflow that sends daily coding challenges via email, helping developers maintain consistent practice and skill improvement.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 text-xs font-medium bg-dark text-secondary rounded">n8n</span>
+                        <span class="px-2 py-1 text-xs font-medium bg-dark text-secondary rounded">API Integration</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Voice To Blog -->
+            <div class="group bg-dark-lighter rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-4px] overflow-hidden border border-dark-lightest">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl mr-3">🎙️</span>
+                        <h3 class="text-xl font-bold text-primary">Voice To Blog</h3>
+                    </div>
+                    <p class="text-secondary mb-4">
+                        Converts voice recordings into polished blog posts using AI transcription and content enhancement, streamlining content creation.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 text-xs font-medium bg-dark text-secondary rounded">n8n</span>
+                        <span class="px-2 py-1 text-xs font-medium bg-dark text-secondary rounded">AI APIs</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pinecone File Uploader -->
+            <div class="group bg-dark-lighter rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-4px] overflow-hidden border border-dark-lightest">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl mr-3">📤</span>
+                        <h3 class="text-xl font-bold text-primary">Pinecone File Uploader</h3>
+                    </div>
+                    <p class="text-secondary mb-4">
+                        Automated system for uploading and indexing files to Pinecone vector database, enabling efficient document search and retrieval.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 text-xs font-medium bg-dark text-secondary rounded">Vector DB</span>
+                        <span class="px-2 py-1 text-xs font-medium bg-dark text-secondary rounded">Automation</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PDF Reader QnA -->
+            <div class="group bg-dark-lighter rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-4px] overflow-hidden border border-dark-lightest">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl mr-3">📚</span>
+                        <h3 class="text-xl font-bold text-primary">PDF Reader QnA</h3>
+                    </div>
+                    <p class="text-secondary mb-4">
+                        AI-powered PDF analysis tool that can read and answer questions about document content, making information extraction effortless.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 text-xs font-medium bg-dark text-secondary rounded">AI</span>
+                        <span class="px-2 py-1 text-xs font-medium bg-dark text-secondary rounded">NLP</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shopify Order Details -->
+            <div class="group bg-dark-lighter rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-4px] overflow-hidden border border-dark-lightest">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl mr-3">🛍️</span>
+                        <h3 class="text-xl font-bold text-primary">Shopify Order Details</h3>
+                    </div>
+                    <p class="text-secondary mb-4">
+                        Automated workflow for processing and managing Shopify order details, streamlining e-commerce operations.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 text-xs font-medium bg-dark text-secondary rounded">n8n</span>
+                        <span class="px-2 py-1 text-xs font-medium bg-dark text-secondary rounded">E-commerce</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Voice Agent -->
+            <div class="group bg-dark-lighter rounded-xl shadow-md hover:shadow-lg transition-all duration-300 hover:translate-y-[-4px] overflow-hidden border border-dark-lightest">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <span class="text-3xl mr-3">🎤</span>
+                        <h3 class="text-xl font-bold text-primary">Voice Agent</h3>
+                    </div>
+                    <p class="text-secondary mb-4">
+                        Interactive voice agent system built with n8n, enabling automated voice interactions and responses.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 text-xs font-medium bg-dark text-secondary rounded">n8n</span>
+                        <span class="px-2 py-1 text-xs font-medium bg-dark text-secondary rounded">Voice Processing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add animations -->
+{% block extra_head %}
+<style>
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .grid > div {
+        animation: fadeInUp 0.6s ease-out forwards;
+        opacity: 0;
+    }
+
+    {% for i in range(12) %}
+    .grid > div:nth-child({{ i + 1 }}) {
+        animation-delay: {{ i * 0.1 }}s;
+    }
+    {% endfor %}
+</style>
+{% endblock %}
+{% endblock %} 

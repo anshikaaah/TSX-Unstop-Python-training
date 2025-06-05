@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/tech.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold text-gradient mb-4">Tech Stack</h1>
+        <p class="text-secondary text-lg max-w-2xl mx-auto">A comprehensive overview of the technologies and tools I work with</p>
+    </div>
+
+    <!-- Tech Categories Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Programming Languages -->
+        <div class="tech-card hover-card rounded-xl p-6">
+            <h2 class="text-2xl font-bold mb-6 text-gradient">Programming Languages</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                {% for lang in ['Python', 'Java', 'C', 'JavaScript', 'TypeScript', 'SQL'] %}
+                <div class="tech-item flex items-center space-x-3 p-3 rounded-lg transition-all">
+                    <i class="fas fa-code text-accent"></i>
+                    <span class="text-primary">{{ lang }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Frameworks & Tools -->
+        <div class="tech-card hover-card rounded-xl p-6">
+            <h2 class="text-2xl font-bold mb-6 text-gradient">Frameworks & Tools</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                {% for tool in ['Flask', 'Django', 'React', 'Node.js', 'Tailwind', 'Bootstrap'] %}
+                <div class="tech-item flex items-center space-x-3 p-3 rounded-lg transition-all">
+                    <i class="fas fa-tools text-accent"></i>
+                    <span class="text-primary">{{ tool }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Project & Workflow Tools -->
+        <div class="tech-card hover-card rounded-xl p-6">
+            <h2 class="text-2xl font-bold mb-6 text-gradient">Project & Workflow</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                {% for tool in ['n8n', 'Git', 'Docker', 'AWS', 'Telegram', 'Twilio'] %}
+                <div class="tech-item flex items-center space-x-3 p-3 rounded-lg transition-all">
+                    <i class="fas fa-project-diagram text-accent"></i>
+                    <span class="text-primary">{{ tool }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- AI/ML Tools -->
+        <div class="tech-card hover-card rounded-xl p-6">
+            <h2 class="text-2xl font-bold mb-6 text-gradient">AI & Machine Learning</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                {% for tool in ['TensorFlow', 'PyTorch', 'OpenCV', 'Scikit-learn', 'NLTK', 'Pandas'] %}
+                <div class="tech-item flex items-center space-x-3 p-3 rounded-lg transition-all">
+                    <i class="fas fa-brain text-accent"></i>
+                    <span class="text-primary">{{ tool }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills Progress Section -->
+    <div class="mt-16">
+        <h2 class="text-3xl font-bold text-center text-gradient mb-12">Core Competencies</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {% for skill in [
+                ('Backend Development', 90),
+                ('Frontend Development', 85),
+                ('Database Management', 80),
+                ('AI/ML Development', 75),
+                ('DevOps & Deployment', 70),
+                ('System Architecture', 85)
+            ] %}
+            <div class="tech-card hover-card rounded-xl p-6">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="text-primary font-medium">{{ skill[0] }}</span>
+                    <span class="text-accent">{{ skill[1] }}%</span>
+                </div>
+                <div class="progress-bar w-full rounded-full h-2.5">
+                    <div class="progress bg-accent h-2.5 rounded-full transition-all duration-1000" style="width: {{ skill[1] }}%"></div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %} 

@@ -1,0 +1,212 @@
+{% extends "base.html" %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- About Me Section -->
+        <div class="space-y-8">
+            <h1 class="text-3xl sm:text-4xl font-bold text-primary">About Me</h1>
+            <div class="prose prose-invert max-w-none">
+                <p class="text-lg text-secondary">
+                    Hi! I'm Anshika Sinha, a passionate developer and automation enthusiast. I love building innovative solutions 
+                    that make a difference. My journey in tech has been driven by curiosity and a desire to create impactful applications.
+                </p>
+                <p class="text-lg text-secondary mt-4">
+                    I specialize in full-stack development, AI automation, and creating efficient workflows. When I'm not coding, 
+                    you'll find me exploring new technologies or contributing to open-source projects.
+                </p>
+            </div>
+        </div>
+
+        <!-- Education Timeline -->
+        <div>
+            <h2 class="text-2xl font-bold text-gradient mb-8">Education Journey</h2>
+            <div class="relative space-y-8">
+                <!-- Timeline Line -->
+                <div class="absolute left-8 top-2 bottom-2 w-0.5 bg-dark-lightest"></div>
+
+                <!-- B.Tech -->
+                <div class="relative flex items-start group">
+                    <div class="absolute left-0 flex items-center justify-center w-16 h-16">
+                        <div class="w-4 h-4 bg-accent rounded-full group-hover:scale-125 transition-transform"></div>
+                    </div>
+                    <div class="ml-24 flex-1 bg-dark-lighter p-6 rounded-xl shadow-md group-hover:shadow-lg transition-all duration-300 border border-dark-lightest">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                            <h3 class="text-xl font-bold text-primary">B.Tech in Electronics & CS</h3>
+                            <span class="text-accent font-medium">2022-2026</span>
+                        </div>
+                        <p class="text-secondary mb-2">Vidyalankar Institute of Technology, Mumbai</p>
+                        <ul class="list-disc list-inside text-secondary space-y-1">
+                            <li>Specializing in Electronics and Computer Science</li>
+                            <li>Active member of the college's tech community</li>
+                            <li>Participating in hackathons and technical events</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Higher Secondary -->
+                <div class="relative flex items-start group">
+                    <div class="absolute left-0 flex items-center justify-center w-16 h-16">
+                        <div class="w-4 h-4 bg-accent rounded-full group-hover:scale-125 transition-transform"></div>
+                    </div>
+                    <div class="ml-24 flex-1 bg-dark-lighter p-6 rounded-xl shadow-md group-hover:shadow-lg transition-all duration-300 border border-dark-lightest">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                            <h3 class="text-xl font-bold text-primary">Higher Secondary Education</h3>
+                            <span class="text-accent font-medium">2020-2022</span>
+                        </div>
+                        <p class="text-secondary mb-2">Pace Junior Science College, Nerul</p>
+                        <ul class="list-disc list-inside text-secondary space-y-1">
+                            <li>Science stream with focus on Physics, Chemistry, and Mathematics</li>
+                            <li>Participated in various academic competitions</li>
+                            <li>Maintained excellent academic performance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Primary & Secondary -->
+                <div class="relative flex items-start group">
+                    <div class="absolute left-0 flex items-center justify-center w-16 h-16">
+                        <div class="w-4 h-4 bg-accent rounded-full group-hover:scale-125 transition-transform"></div>
+                    </div>
+                    <div class="ml-24 flex-1 bg-dark-lighter p-6 rounded-xl shadow-md group-hover:shadow-lg transition-all duration-300 border border-dark-lightest">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                            <h3 class="text-xl font-bold text-primary">Primary & Secondary Education</h3>
+                            <span class="text-accent font-medium">2010-2020</span>
+                        </div>
+                        <p class="text-secondary mb-2">St. Mary's ICSE School, Koparkhairane</p>
+                        <ul class="list-disc list-inside text-secondary space-y-1">
+                            <li>Consistently achieved academic excellence</li>
+                            <li>Active participation in extracurricular activities</li>
+                            <li>Developed strong foundation in core subjects</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-primary mb-8">Technical Skills</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Languages -->
+            <div class="bg-dark-lighter p-6 rounded-lg shadow-md border border-dark-lightest">
+                <h3 class="text-xl font-semibold text-primary mb-4 flex items-center">
+                    <svg class="w-6 h-6 mr-2 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                    </svg>
+                    Programming Languages
+                </h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-2 h-2 bg-accent rounded-full"></div>
+                        <span class="text-secondary">C</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-2 h-2 bg-accent rounded-full"></div>
+                        <span class="text-secondary">Java</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-2 h-2 bg-accent rounded-full"></div>
+                        <span class="text-secondary">Python</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-2 h-2 bg-accent rounded-full"></div>
+                        <span class="text-secondary">SQL</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-2 h-2 bg-accent rounded-full"></div>
+                        <span class="text-secondary">HTML</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-2 h-2 bg-accent rounded-full"></div>
+                        <span class="text-secondary">CSS</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-2 h-2 bg-accent rounded-full"></div>
+                        <span class="text-secondary">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools & Technologies -->
+            <div class="bg-dark-lighter p-6 rounded-lg shadow-md border border-dark-lightest">
+                <h3 class="text-xl font-semibold text-primary mb-4 flex items-center">
+                    <svg class="w-6 h-6 mr-2 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+                    </svg>
+                    Tools & Technologies
+                </h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-2 h-2 bg-accent rounded-full"></div>
+                        <span class="text-secondary">PostgreSQL</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-2 h-2 bg-accent rounded-full"></div>
+                        <span class="text-secondary">Bootstrap</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-2 h-2 bg-accent rounded-full"></div>
+                        <span class="text-secondary">APIs</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-2 h-2 bg-accent rounded-full"></div>
+                        <span class="text-secondary">Embedded C</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-2 h-2 bg-accent rounded-full"></div>
+                        <span class="text-secondary">8051 Assembly</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <div class="w-2 h-2 bg-accent rounded-full"></div>
+                        <span class="text-secondary">8086</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add animations -->
+<style>
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.prose p {
+    animation: slideInRight 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.prose p:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.relative.flex.items-start {
+    animation: slideInRight 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.relative.flex.items-start:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.relative.flex.items-start:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.relative.flex.items-start:nth-child(4) {
+    animation-delay: 0.6s;
+}
+</style>
+{% endblock %} 

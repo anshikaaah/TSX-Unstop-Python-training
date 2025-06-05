@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anshika Sinha - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    {% block extra_head %}{% endblock %}
+    <style>
+        :root {
+            --dark-bg: #0f172a;
+            --dark-lighter: #1e293b;
+            --dark-lightest: #334155;
+            --primary: #f8fafc;
+            --secondary: #94a3b8;
+            --accent: #818cf8;
+        }
+
+        body {
+            background-color: #000000;
+            color: var(--primary);
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        #globe-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at center, #000000 0%, #0f172a 100%);
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            padding-top: 4rem; /* Add padding to prevent content from going under navbar */
+        }
+
+        .bg-dark { background-color: var(--dark-bg); }
+        .bg-dark-lighter { background-color: var(--dark-lighter); }
+        .bg-dark-lightest { background-color: var(--dark-lightest); }
+        .text-primary { color: var(--primary); }
+        .text-secondary { color: var(--secondary); }
+        .text-accent { color: var(--accent); }
+        .border-dark-lightest { border-color: var(--dark-lightest); }
+
+        /* Gradient Text */
+        .text-gradient {
+            background: linear-gradient(135deg, var(--accent), #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Navigation Hover Effects */
+        .nav-link {
+            position: relative;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Card Hover Effects */
+        .hover-card {
+            transition: all 0.3s ease;
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+        }
+
+        .hover-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            background: rgba(30, 41, 59, 0.9);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 640px) {
+            .nav-link::after {
+                display: none;
+            }
+        }
+
+        /* Fixed Navigation */
+        .fixed-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Globe Background -->
+    <canvas id="globe-bg"></canvas>
+
+    <!-- Navigation -->
+    <nav class="fixed-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="text-xl font-bold text-gradient">AS</a>
+                </div>
+                <div class="hidden sm:flex items-center space-x-4">
+                    <a href="/" class="nav-link text-primary hover:text-accent">Home</a>
+                    <a href="/about" class="nav-link text-primary hover:text-accent">About</a>
+                    <a href="/projects" class="nav-link text-primary hover:text-accent">Projects</a>
+                    <a href="/tech" class="nav-link text-primary hover:text-accent">Tech Stack</a>
+                    <a href="/contact" class="nav-link text-primary hover:text-accent">Contact</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="flex items-center sm:hidden">
+                    <button id="mobile-menu-button" class="text-primary hover:text-accent">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="sm:hidden hidden bg-black/90 backdrop-blur-lg border-t border-white/10">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="/" class="block px-3 py-2 text-primary hover:text-accent">Home</a>
+                <a href="/about" class="block px-3 py-2 text-primary hover:text-accent">About</a>
+                <a href="/projects" class="block px-3 py-2 text-primary hover:text-accent">Projects</a>
+                <a href="/tech" class="block px-3 py-2 text-primary hover:text-accent">Tech Stack</a>
+                <a href="/contact" class="block px-3 py-2 text-primary hover:text-accent">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow content-wrapper">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/90 backdrop-blur-lg border-t border-white/10 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex flex-col sm:flex-row justify-between items-center">
+                <p class="text-secondary text-sm">© 2025 Anshika Sinha. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 sm:mt-0">
+                    <a href="https://github.com/anshikaaah" target="_blank" rel="noopener noreferrer" 
+                       class="text-secondary hover:text-accent transition-colors">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/anshika-sinha" target="_blank" rel="noopener noreferrer" 
+                       class="text-secondary hover:text-accent transition-colors">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="mailto:contact@anshikasinha.com" 
+                       class="text-secondary hover:text-accent transition-colors">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Globe Animation Script -->
+    <script>
+        // Initialize Three.js scene
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({
+            canvas: document.getElementById('globe-bg'),
+            antialias: true,
+            alpha: true
+        });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setClearColor(0x000000, 0);
+
+        // Create globe geometry with higher detail
+        const globeGeometry = new THREE.SphereGeometry(5, 64, 64);
+        const globeMaterial = new THREE.MeshPhongMaterial({
+            color: 0xffffff,
+            transparent: true,
+            opacity: 0.1,
+            wireframe: true,
+            wireframeLinewidth: 0.5
+        });
+        const globe = new THREE.Mesh(globeGeometry, globeMaterial);
+
+        // Add outer glow sphere
+        const glowGeometry = new THREE.SphereGeometry(5.2, 64, 64);
+        const glowMaterial = new THREE.MeshPhongMaterial({
+            color: 0x3366ff,
+            transparent: true,
+            opacity: 0.1,
+            side: THREE.BackSide
+        });
+        const glowSphere = new THREE.Mesh(glowGeometry, glowMaterial);
+        scene.add(glowSphere);
+
+        // Add ambient and point lights
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+        scene.add(ambientLight);
+
+        const pointLight = new THREE.PointLight(0xffffff, 1);
+        pointLight.position.set(10, 10, 10);
+        scene.add(pointLight);
+
+        // Add particle system for stars
+        const starsGeometry = new THREE.BufferGeometry();
+        const starsMaterial = new THREE.PointsMaterial({
+            color: 0xffffff,
+            size: 0.1,
+            transparent: true,
+            opacity: 0.8
+        });
+
+        const starsVertices = [];
+        for (let i = 0; i < 1000; i++) {
+            const x = (Math.random() - 0.5) * 100;
+            const y = (Math.random() - 0.5) * 100;
+            const z = (Math.random() - 0.5) * 100;
+            starsVertices.push(x, y, z);
+        }
+
+        starsGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starsVertices, 3));
+        const stars = new THREE.Points(starsGeometry, starsMaterial);
+        scene.add(stars);
+
+        // Add the globe to the scene
+        scene.add(globe);
+
+        // Position camera
+        camera.position.z = 15;
+
+        // Animation
+        let mouseX = 0;
+        let mouseY = 0;
+        const windowHalfX = window.innerWidth / 2;
+        const windowHalfY = window.innerHeight / 2;
+
+        document.addEventListener('mousemove', (event) => {
+            mouseX = (event.clientX - windowHalfX) / 100;
+            mouseY = (event.clientY - windowHalfY) / 100;
+        });
+
+        function animate() {
+            requestAnimationFrame(animate);
+
+            // Rotate globe
+            globe.rotation.y += 0.001;
+            glowSphere.rotation.y += 0.001;
+
+            // Smooth camera movement based on mouse position
+            camera.position.x += (mouseX - camera.position.x) * 0.05;
+            camera.position.y += (-mouseY - camera.position.y) * 0.05;
+            camera.lookAt(scene.position);
+
+            // Rotate stars slowly
+            stars.rotation.y += 0.0002;
+
+            renderer.render(scene, camera);
+        }
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        animate();
+    </script>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html> 
